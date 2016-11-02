@@ -3,21 +3,99 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<style>
+.col-sm-2, .col-sm-4 {
+   padding: 0;
+}
+#old_times {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to right, rgba(204,204,204,1), rgba(245,245,245,1));
+    background: -o-linear-gradient(to right, rgba(204,204,204,1), rgba(245,245,245,1));
+    background: -moz-linear-gradient(to right, rgba(204,204,204,1), rgba(245,245,245,1));
+    background: linear-gradient(to right, rgba(204,204,204,1), rgba(245,245,245,1));
+    margin-top: 2px;
+}
+#new_time {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to right, rgba(245,245,245,1), rgba(255,255,255,1));
+    background: -o-linear-gradient(to right, rgba(245,245,245,1), rgba(255,255,255,1));
+    background: -moz-linear-gradient(to right, rgba(245,245,245,1), rgba(255,255,255,1));
+    background: linear-gradient(to right, rgba(245,245,245,1), rgba(255,255,255,1));
+    border: solid #337aa7 2px;
+}
+</style>
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-12">
-			<div id="my-slider" class="carousel slide" data-ride="carousel">
-				<!-- indicators (dot navigation) -->
-				<div>
+		<div class="col-sm-5"
+		     id="old_times">
+			<div class="row">
+				<div class="col-sm-4">
+					<div id="my-slider1" class="carousel slide" data-ride="carousel">
+						<!-- wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active text-center">
+								<div class="corousel-caption">
+									<h1>12:54:37</h1>
+								</div>
+							</div>
+							<div class="item text-center">
+								<div class="corousel-caption">
+									<h1>12:57:19</h1>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				
+				<div class="col-sm-4">
+					<div id="my-slider2" class="carousel slide" data-ride="carousel">
+						<!-- wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active text-center">
+								<div class="corousel-caption">
+									<h1>12:54:37</h1>
+								</div>
+							</div>
+							<div class="item text-center">
+								<div class="corousel-caption">
+									<h1>12:57:19</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-4">
+					<div id="my-slider3" class="carousel slide" data-ride="carousel">
+						<!-- wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active text-center">
+								<div class="corousel-caption">
+									<h1>12:54:37</h1>
+								</div>
+							</div>
+							<div class="item text-center">
+								<div class="corousel-caption">
+									<h1>12:57:19</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		
+		<div class="col-sm-2"
+		     id="new_time">
+			<div id="main-slider" class="carousel slide" data-ride="carousel">
 				<!-- wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active text-center">
-						<!-- a -->
 						<div class="corousel-caption">
 							<h1>12:54:37</h1>
 						</div>
@@ -28,11 +106,11 @@
 						</div>
 					</div>
 				</div>
-				
-				<!-- controls (next and prev buttons) -->
-				<div>
-				</div>
 			</div>
+		</div>
+		
+		<div class="col-sm-5 text-center">
+			<h1>Hit space text</h1>
 		</div>
 	</div>
 </div>
@@ -53,7 +131,10 @@ crossorigin="anonymous"></script>
 	
 	
 	function ChangeSlide() {
-		$("#my-slider").carousel('next');
+		$("#main-slider").carousel('next');
+		$("#my-slider1").carousel('next');
+		$("#my-slider2").carousel('next');
+		$("#my-slider3").carousel('next');
 	}
 </script>
 </body>
